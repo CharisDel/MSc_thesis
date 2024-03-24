@@ -1,6 +1,8 @@
 # MSc Thesis
 
-## title: Study of signal to background discrimination and Cross section measurement on production of $ZZ\rightaroow llvv$ in proton-proton collisions at 13 TeV
+## title: 
+
+Study of signal to background discrimination and Cross section measurement on production of $ZZ\rightarrow llvv$ in proton-proton collisions at 13 TeV.
 
 ## Description
 
