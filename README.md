@@ -1,6 +1,10 @@
 # MSc Thesis
 
-## title 
+## title: Study of signal to background discrimination and Cross section measurement on production of $ZZ\rightaroow llvv$ in proton-proton collisions at 13 TeV
+
+## Description
+
+This work focuses on estimating the signal and background contributions, and calculating the fiducial cross-section $σ^{fid}(pp\rightarrow ZZ\rightarrow 2l2ν)$ for the production of two Z bosons in proton-proton collisions at $\sqrt{s} = 13$ TeV. Using data collected by the ATLAS experiment at CERN, we analyze the full Run 2 sample with an integrated luminosity of 140.1 $fb^{−1}$. 
 
 * To basiko arxeio einai to vol0.C (kakos xamos)	
 	Edw upologizei olous tous scaling factors (direct etimation (per Region)) enan enan analoga me to 
