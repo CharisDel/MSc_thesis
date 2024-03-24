@@ -11,24 +11,24 @@ This work focuses on estimating the signal and background contributions, and cal
 
 ## Main Parts of the Analysis
 
-* We define 5 datasets corresponding to 5 distinct regions. Every dataset is constructed by imposing specific selection criteria in such way that either signal events (Signal Region (SR)) are enhanced or background events (Control Regions (CRs)). All of them contain real data and Monte Carlo simulations.<n> 
-Four are our primary goals:<n>
-1. Optimization of SR<n>
+We define 5 datasets corresponding to 5 distinct regions. Every dataset is constructed by imposing specific selection criteria in such way that either signal events (Signal Region (SR)) are enhanced or background events (Control Regions (CRs)). All of them contain real data and Monte Carlo simulations.<br> 
+Four are our primary goals:<br>
+1. Optimization of SR<br>
    The SR is quite loose and full of background contamination. Thus it requires refinement. We do so by identifying such kinematic variables that are suitable for the best possible discrimination between signal and background. Subsequently, optimization is performed (using a Brute Force method and a Genetic Algorithm) on these specific kinematic variables in order to introduce further constraints on their values, always with the aim of reduc-ing the phase space while achieving the best possible signal-to-background ratio.
 
-2. Scaling factors<n>
+2. Scaling factors<br>
    Predictions from Monte Carlo simulations for background processes are used and corrected by appropriate scaling factors, such that the contribution of backgrounds explains the observed event count in the CRs. The determination of these factors is done in two ways:
    (i) Depending on how "pure" the Control Region in the background it contains is, the scaling factor of Monte Carlo events for the background is adjusted. In each subsequent CR, the calculated scaling factors are used. Finally, the corresponding scaling factor for the signal events is determined, which quantifies the compatibility of the number of measured signal events with the prediction of the Standard Model (expressed by the prediction from simula-
    tions).
    (ii) By simultaneous calculation of all scaling factors, including the signal scaling factor, by constructing the total -Log-likelihood function and finding the best combination of free parameters (scaling factors) that minimize it.
 
-3. Validation Region (VR)<n>
+3. Validation Region (VR)<br>
    One more region is defined, VR, in order to evaluate the simultaneous application of the obtained scaling factors.
 
-4. Cross Section Calculation<n>
+4. Cross Section Calculation<br>
    In order to translate our observations from the SR into measurements of cross section, an analysis of files corresponding to Fiducial Regions is performed. These regions are constructed in such a way as to simulate events of the specific interaction channel as they occur in nature before passing through the detector.
 
-## Additional info about codes
+## Info about Codes
 
 * To basiko arxeio einai to vol0.C (kakos xamos)	
 	Edw upologizei olous tous scaling factors (direct etimation (per Region)) enan enan analoga me to 
@@ -74,4 +74,4 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ## Contact
 
-If you have any questions or feedback, feel free to contact me at [deligkasxaris@gmail.com].
+If you have any questions or feedback, feel free to contact me at [deligkasxaris@gmail.com](mailto:deligkasxaris@gmail.com).
