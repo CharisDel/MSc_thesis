@@ -2,26 +2,14 @@
 #include <TROOT.h>
 #include <TChain.h>
 #include <TFile.h>
-#include <TLorentzVector.h>
 #include <TH1.h>
 #include <TH2.h>
 #include <vector>
-#include <TGraphErrors.h>
-#include <TMarker.h>
-#include <TPaveText.h>
 #include <TLatex.h>
 #include "TProfile.h"
 #include "TMath.h"
-#include "TStyle.h"
-#include <TLatex.h>
-#include <TPad.h>
-#include <TLegend.h>
-#include <TCanvas.h>
-#include <TLine.h>
 #include <iostream>
 #include <fstream>
-#include <vector>
-#include <math.h>
 #include <chrono> //Timer
 using namespace std;
 //

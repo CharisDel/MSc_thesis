@@ -30,19 +30,16 @@ Four are our primary goals:<br>
 
 ## Info about Codes
 
-* To basiko arxeio einai to vol0.C (kakos xamos)	
-	Edw upologizei olous tous scaling factors (direct etimation (per Region)) enan enan analoga me to 
-	purity tis perioxis (top(emCR_B)->WZ(3lCR)->Zjets2->Zjets1->Zjets0->WW(emCR_A)) kai telos gia tin SR
-	to signal strength μ_s
-	Telos kanw kati sximata gia tin SR
+* zjets_splitter.c 
+  Splits one of the major background CR into three individual ones, regarding the different values that one variable can get. This was done in order to help us analyze this background in the best possible way.
 	
-* Brute Force Optimization (BruteForce.C)
+* Merging.C
+  This script merges two of the major background processes into one. This was done in order to test if the new concatenated region would provide us better results using only one scaling factor rather two for each one of them.
 
-* Genetic Algorithm Optimization (GA_0.C)
+* ThreelCR.C, emCR_A.C, emCR_B.C, Zjets0CR.C, Zjets1CR.C, Zjets2CR.C, ZjetsCR.C
+  These scripts are used for the calculation of the scaling factors and the creation of histograms (Events vs variables).
 
-* Genetic Algorithm Graphs (GeneticResults.C)
-	sximata apla gia tin max signiicance kai tin Average significance gia Tournament selection kai 
-	RouletteWheel selection operators 
+* 
 	
 * Simultaneous Fit (Simultane.C)
 	Gia to simultaneous "fit" xrisimopoiwntas 7 mono likelihood functions (dinei kala apotelesmata)
