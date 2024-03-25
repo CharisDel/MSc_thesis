@@ -30,36 +30,38 @@ Four are our primary goals:<br>
 
 ## Info about Codes
 
-* zjets_splitter.c 
-  Splits one of the major background CR into three individual ones, regarding the different values that one variable can get. This was done in order to help us analyze this background in the best possible way.
+* zjets_splitter.c<br>
+  Splits one of the major background CR into three individual ones, regarding the different values that one variable can get (jets multiplicity: $n_{jets} = 0, 1, > 1$). This was done in order to help us analyze this background in the best possible way and use three scaling factors instead of one for this CR.
 	
-* Merging.C
+* Merging.C<br>
   This script merges two of the major background processes into one. This was done in order to test if the new concatenated region would provide us better results using only one scaling factor rather two for each one of them.
 
-* ThreelCR.C, emCR_A.C, emCR_B.C, Zjets0CR.C, Zjets1CR.C, Zjets2CR.C, ZjetsCR.C
-  These scripts are used for the calculation of the scaling factors and the creation of histograms (Events vs variables).
+* ThreelCR.C, emCR_A.C, emCR_B.C, Zjets0CR.C, Zjets1CR.C, Zjets2CR.C, ZjetsCR.C<br>
+  These scripts are used for the calculation of the scaling factors and the creation of histograms (Events vs variables) in order to evaluate the Data/MC ratio before and after the impementation of scaling factors.
 
-* 
+* vol0.C<br>
+  This is the main script that calculates all scaling factors for all regions (SR & CRs). It creates histograms (Events vs variables) where it is shown a comparison between signal and background events before the implementation of scaling factors. The respective distributions are presented as PDFs (Probability Density Functions). These histograms play pivotal role in the understanding of the so called well-behaved variables as they present in the second pad the statistical metric of Signal Significance utilizing the Integral of signal and background distributions. Also it provides the calculation of the cross section quantity using the events that are found in the fiducial regions.
+
+* BruteForce.C<br>
+  Performs an optimization routine through nested loops regarding the well-behaved variables that were defined by vol0.C.
+
+* GA_0.C<br>
+  Performs a more sophisticated optimization routine (Genetic Algorithm). The operations that are used here are: (i) Population Initialization. (ii) Fitness Function Calculation (Signal Significance) (iii) Selection (Tournament Selection || Roulette Wheel Selection) (iv) Crossover (Uniform Crossover) (v) Mutation.
+
+* GeneticResults.C<br>
+  This script provides graphs where a comparison is made between the max and average values of Signal Significance that are found during generations regarding the type of Selection operator that we use (Tournament Selection || Roulette Wheel Selection).
 	
-* Simultaneous Fit (Simultane.C)
-	Gia to simultaneous "fit" xrisimopoiwntas 7 mono likelihood functions (dinei kala apotelesmata)
-	Scaling factors + statistiko sfalma + sustimatiko sfalma + pull distributions gia stat kai syst 
+* Simultane.C<br>
+  This script is used to assess all scaling factors utilizing a Simultaneous Fit approach. We constauct a total -Log-Likelihood function composed by seven individual ones (one for each region we have). The scaling factors are used as free parameters in our model and the minimization of the total -Log-Likelihood returns their values. Moreover, we compute separately the statistical and the systematic error for each one scaling factor we compute by imposing gaussian variations in the observed and Monte Carlo simulations respectivelly. Finally, we create the pull distributions for the verification of the obtained statistical and systematic errors.
 	
-* Simultaneous Fit (Simultane_new.C)
-	Kanonika gia na kaneis fit prepei na afiseis bathmous eleutherias. Arithmos eksiswsewn - arithmo 
-	parametrwn = Degrees of freedom. Gi auto spame tin individual likeliood tis kathe region se 2 
-	epimerous-> 14 eksiswseis - 7 parameters eisai OK
-	Paraskeui to doulepsa kai Deutera parousiaza. Den to oloklirwsa...
+* Simultane_new.C<br>
+  A more concrete approach about the Simultaneous Fit method. In this script we split each region into two in order to leave degrees of freedom in our system. It can be used only to extract all scaling factors. Concerning the statistical and systematic errors and their verification through the pull distributions Simultane.C is quite accurate.
+
+* ScalingFactorsDisplay.C, ScalingFactorssimultaneous.C<br>
+  They provide a visual representation of the obtained scaling factors by the direct estimation and the Simultaneous Fit method. They present their values together with their statistical errors. 
 	
-* Validation Regions (ValidationRegion.C)
-	Ta cuts pou bazw ta exw sto keimeno an ginei kai gia tis duo
-	Mono gia mia validation region (mikri lwrida) einai i Validation Region B ousiastika (keimeno)
-	
-* (ScalingFactorsDisplay.C)
-	Pws ebgala ekino to sximataki apla gia na parousiasw tous scaling factors
-	
-* (Zjets_splitter.C)
-	Pws spaei to directory-samples Zjets se epimerous analoga me ton jet multiplicity
+* ValidationRegion.C
+  This script creates a validation region where we can apply and assess the behaviour of Data/MC ratio before and after we impose scaling factors. A compatible with unity value for the aforementioned ratio provides us confidence that we can apply scaling factors for the Monte Carlo simulation in the SR.
 	
 ## Version
 
